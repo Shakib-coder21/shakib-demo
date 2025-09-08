@@ -1,4 +1,4 @@
 # shakib-demo
 This is my first Git repository.
 <br>
-Author- Shakib Ali
+Author- Shakib Al.gi
