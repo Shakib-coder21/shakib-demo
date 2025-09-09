@@ -1,0 +1,274 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+.navigation{
+    height: 96px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fdf2e9;
+}
+
+.logo img{
+    height: 120px;
+    width: auto;
+}
+
+ul{
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+ul li:last-child{
+    margin-right: 100px;
+}
+
+ul li{
+    font-size: 21px;
+    color: #555;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    background-color: #eba266;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 0.4s;
+}
+
+ul li:hover::after{
+    width: 100%;
+}
+
+.hero-section{
+    height: calc(100vh - 96px);
+    background-color: #fdf2e9;
+}
+
+.hero{
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.hero_img img{
+    width: 70%;
+    height: auto;
+    z-index: 9;
+}
+
+.hero_img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero_img::after{
+    content: '';
+    height: 544px;
+    width: 544px;
+    border-radius: 50%;
+    background-color: #e4dad2;
+    position: absolute;
+}
+
+.hero-text h1{
+    font-size: 45px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.hero-text p{
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.btn{
+    border: none;
+    padding: 20px 40px;
+    font-size: 20px;
+    background-color: #eba266;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 18px;
+    transition: all 0.4s;
+    position: relative;
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px rgba(235, 162, 102, 0.5);
+}
+
+.btn:active{
+    transform: translateY(3px);
+    box-shadow: 0 10px 15px rgba(235, 162, 102, 0.5);
+}
+
+.btn::after{
+    content: '';
+    height: 100%;
+    width: 100%;
+    border-radius: 18px;
+    background-color: #eba266;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.5s ease;
+}
+
+.btn:hover::after{
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+
+
+
+
+
+
+.hero_img img {
+    width: 70%;
+    height: auto;
+    z-index: 9;
+    transition: all 0.5s ease;  /* smooth animation */
+    cursor: pointer;  /* shows it's interactive */
+}
+
+.hero_img img:hover {
+    transform: scale(1.1) rotate(-2deg); /* zoom in + slight tilt */
+    filter: brightness(1.1) contrast(1.05); /* pop colors */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2); /* soft shadow */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.logo {
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.2); /* translucent background */
+    backdrop-filter: blur(12px); /* frosted glass blur */
+    -webkit-backdrop-filter: blur(12px); /* Safari support */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.4s ease;
+}
+
+.logo:hover {
+    transform: scale(1.08) rotate(2deg); /* small hover animation */
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+.logo img {
+    height: 120px;
+    width: auto;
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hero_img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden; /* keeps glow/overlay contained */
+    border-radius: 24px; /* smooth rounded corners */
+}
+
+.hero_img img {
+    width: 70%;
+    height: auto;
+    z-index: 2;
+    transition: all 0.6s ease;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+/* Glass overlay effect */
+.hero_img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transform: skewX(-20deg);
+    transition: 0.7s ease;
+    z-index: 3;
+}
+
+/* Glow around image */
+.hero_img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    box-shadow: 0 0 40px rgba(235, 162, 102, 0.3);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    z-index: 1;
+}
+
+/* Hover animations */
+.hero_img:hover img {
+    transform: scale(1.08);
+    filter: brightness(1.15) contrast(1.1);
+}
+
+.hero_img:hover::before {
+    left: 100%; /* smooth sliding light effect */
+}
+
+.hero_img:hover::after {
+    opacity: 1; /* soft glowing aura */
+}
+
+
+
